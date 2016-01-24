@@ -1,0 +1,52 @@
+PROGRAMACIÓN AVANZADA
+TAREA 1
+
+Desarrollar una aplicación en línea de comandos que permita realizar las operaciones aritméticas básicas para números complejos, estas se indicarán mediante 
+un carácter como se muestra en seguida:
+Suma + 
+Resta - 
+Multiplicación x 
+y División /
+
+El nombre del archivo ejecutable será "complexMath".
+Los números estarán constituídos por una parte real y una imaginaria, siendo ambas números reales,
+
+En seguida se muestra un ejemplo de uso para sumar los números (4.5+3.7i) + (2.6-3.11i)
+$complexMath 4.5 3.7 2.6 -3.11 +
+
+En caso de no colocar los argumentos adecuados se debe mostrar la forma de uso.
+
+Se deben entregar los siguientes archivos debidamente comentados para que los pueda utilizar una tercera persona:
+
+complexMath.c   //Código fuente para las funciones definidas para leer los números complejos de la línea de comandos, imprimir los números y realizar las operaciones
+complexMath.h	//Definición de la estructura de datos y funciones contenidas en el archivo anterior
+main.c			//Aplicación que hace uso de la biblioteca de números complejos
+Makefile		//Archivo con las reglas necesarias para compilar la aplicación
+
+Casos de uso:
+adminuser@adminuser ~/workspace/complexMath-calculator $ ./complexMath 4.5 5.6 6.7 8.9 /
+
+	4.50 5.60i
+   /
+	6.70 8.90i
+    ________________
+	0.64 -0.02i
+
+adminuser@adminuser ~/workspace/complexMath-calculator $ ./complexMath 4.5 5.6 6.7 8.9 
+Usage:
+$complexMath op1 operator op2
+ 	operator:
+ 	 + addition
+ 	 - substraction
+ 	 x multiplcation
+ 	 / division
+ 	 % modulus
+ 	
+ 	op1:
+ 	 realPart imaginaryPart
+ 	op2:
+ 	 realPart imaginaryPart
+
+ 	 e.g.: (4 + 5i)(1 + 3i)
+ 	 complexMath 4 5 * 1 3
+
